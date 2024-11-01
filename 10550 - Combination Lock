@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+
+int main() {
+    int a,b,c,d;
+
+    while(~scanf("%d%d%d%d",&a,&b,&c,&d)){
+        if(a==0 && b==0 && c==0 && d==0){
+            break;
+        }else{
+            int rotate = a-b + c-b + c-d + 120; //40*3至少會轉三圈
+            if(a <= b){
+                rotate +=40;
+            }
+            if (c <= b){
+                rotate +=40;
+            }
+            if (c <= d){
+                rotate +=40;
+            }
+
+            int result = rotate*(360/40);
+            printf("%d", result);
+        }
+    }
+
+    return 0;
+}
