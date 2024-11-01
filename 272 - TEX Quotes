@@ -4,16 +4,16 @@ int main(){
 	char first = '`';
 	char second1 = '\'';
 	char second2 = '\0\'';
-	
+
 	char goal = '\'' ;
 	char arr[1000];
 	int flag = 1;
-	int len = stelen(arr);
+	int len = strlen(arr);
 
 	while(scanf("%s", arr) != EOF){
-		int len = stelen(arr);
+		int len = strlen(arr);
 		for(int i =0; i<len; i++){
-			if (arr[i] = goal && arr[i+1] = goal){
+			if ((arr[i] = goal) && (arr[i+1] = goal)){
 				if (flag ==1){
 					arr[i] = first;
 					arr[i+1] = first;
