@@ -1,3 +1,14 @@
+/*
+第一次順時針、第二次逆時針、第三次順時針
+如果 原位置 a=0, 目標位置 b=5，順時針由39,38,...,5，共35格；逆時針由1,2,...,5，共5格
+代表若 a < b 
+順時針-> 40-5=35 -> 40-(b-a)=a-b+40
+逆時針-> a-b
+
+但若 b < a
+順時針-> a-b
+逆時針-> b-a+40 (剛好相反)
+*/
 #include<stdio.h>
 #include<math.h>
 
@@ -9,7 +20,7 @@ int main() {
             break;
         }else{
             int rotate = a-b + c-b + c-d + 120; //40*3至少會轉三圈
-            if(a <= b){
+            if(a <= b){ 
                 rotate +=40;
             }
             if (c <= b){
@@ -20,7 +31,7 @@ int main() {
             }
 
             int result = rotate*(360/40);
-            printf("%d", result);
+            printf("%d\n", result); //要換行
         }
     }
 
